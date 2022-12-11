@@ -1,0 +1,52 @@
+body {
+    max-width: 90%;
+    text-align: center;
+    background-color: gray;
+    margin-top: 0;
+}
+
+.nav-item {
+     list-style-type: none;
+     background-color: #333333; 
+    text-align: right;
+    border:2px black;
+
+}
+li {
+    color: red;
+}
+.Contact {
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  form {
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: lightblue;
+  }
+  .card {
+   width: 400px;
+   height: 300px;
+   padding: 20px;
+   border: 2px blue; 
+  }
+ .card-title {
+    font-weight: bold;
+ }
+  button {
+   background-color: white;
+   border-color: blue;
+   color: white;
+   border-radius: 8px;
+  } 
+footer {
+position: absolute;
+width: 100%;
+left: 0;
+bottom: 0;
+background: #333333;
+text-align: center;
+}
+

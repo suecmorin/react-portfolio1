@@ -2,8 +2,7 @@
 import React from "react";
 import emailjs from "emailjs-com";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './contact.css';
-const SERVICE_ID = "service_contact_"
+const SERVICE_ID = "default_service"
 const TEMPLATE_ID = "contact_template";
 const USER_ID = "yIYlKQuRfd4iacIRA";
 
@@ -25,18 +24,18 @@ const Contact = () => {
 
 return (
     <div className='Contact'>
-      <form onsubmit={handleOnSubmit}>
-        <div class="form-group">
-          <label for="Email">user_email</label>
-          <input type="email" class="form-input-control-email" id="user_email" name="user_email" placeholder="Enter email" required></input>
+      <form className='form' onSubmit={handleOnSubmit}>
+        <div className="form-group">
+          <label for="Email">Email    </label>
+          <input type="email" className="form-input-control-email" id="user_email" name="user_email" placeholder="Enter email" required></input>
         </div>
-        <div class="form-group">
-          <label for="Name">user_name</label>
-          <input type="name" class="form-input-control" id="user_name" name="user_name" placeholder="Enter name" required></input>
+        <div className="form-group">
+          <label for="Name">Name</label>
+          <input type="name" className="form-input-control" id="user_name" name="user_name" placeholder="Enter name" required></input>
         </div>
-        <div class="form-group">
+        <div className="form-group">
          <label for="message">Message</label>
-        <textarea class="form-control" id="user_message" placeholder="Message" required></textarea>
+        <textarea className="form-control" id="user_message" placeholder="Message" required></textarea>
         </div>
         <button type='submit' color='green'>Submit</button>
       </form>

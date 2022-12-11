@@ -4,19 +4,26 @@ import React from 'react';
 // We assign them to their own variable names
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <ul className="nav nav-tabs">  
-      <li className="nav-item">
+  
+      <header className="bg-gray-800 md:sticky top-0 z-10">
+         <h3 className="title-font font-medium text-white mb-4 md:mb-0">
+         Susan C. Morin
+         </h3>
+      <ul className="nav nav-tabs md:mr-auto md:ml-4 md:py-1 md:pl-4 
+          md:border-l md:border-gray-700	flex flex-wrap 
+          items-center text-base justify-center">  
+      <li className="nav-item mr-5 hover:text-white">
         <a
           href="#about"
-          onClick={() => handlePageChange('About')}
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+          onClick={() => handlePageChange('AboutMe')}
+          className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
         >
           About Me
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item mr-5 hover:text-white">
         <a
-          href="#projects"
+          href="#project"
           onClick={() => handlePageChange('Project')}
           className={currentPage === 'Project' ? 'nav-link active' : 'nav-link'}
         >
@@ -24,7 +31,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         </a>
       </li>
     
-      <li className="nav-item">
+      <li className="nav-item mr-5 hover:text-white">
         <a
           href="#contact"
           onClick={() => handlePageChange('Contact')}
@@ -33,7 +40,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           Contact
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item mr-5 hover:text-white">
         <a
           href="#resume"
           onClick={() => handlePageChange('Resume')}
@@ -43,7 +50,8 @@ function NavTabs({ currentPage, handlePageChange }) {
         </a>
       </li>
     </ul>
-  );
+    </header>
+  )
 }
 
 export default NavTabs;
