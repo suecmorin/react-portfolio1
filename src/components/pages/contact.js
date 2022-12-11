@@ -1,93 +1,51 @@
-
+//credit https://javascript.plainenglish.io/how-to-build-a-contact-form-in-react-that-sends-emails-using-emailjs-70011d2563a3
 import React from "react";
+import emailjs from "emailjs-com";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './contact.css';
+const SERVICE_ID = "service_contact_"
+const TEMPLATE_ID = "contact_template";
+const USER_ID = "yIYlKQuRfd4iacIRA";
 
-export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
 
-  function handleSubmit(e) {
+const Contact = () => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
-  }
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then((result) => {
+        console.log('Message Sent Successfully');
+      },
+      (error) => {
+        console.log('Ooops, something went wrong'); 
+      });
+    e.target.reset()
+  };
 
-  return (
-    <section id="contact" className="relative">
-      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                EMAIL
-              </h2>
-              <a className="text-indigo-400 leading-relaxed">
-                suecmorin@gmail.com
-              </a>
-          </div>
+
+return (
+    <div className='Contact'>
+      <form onsubmit={handleOnSubmit}>
+        <div class="form-group">
+          <label for="Email">user_email</label>
+          <input type="email" class="form-input-control-email" id="user_email" name="user_email" placeholder="Enter email" required></input>
         </div>
-        <form
-          netlify
-          name="contact"
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-            <div className="relative mb4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 
-              focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base 
-              outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-              Email
-            </label>
-            <input
-              type="email" placeholder="Enter your email" required
-              id="email"
-              name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 
-              focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 
-              leading-8 transition-colors duration-200 ease-in-out"
-              />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-400">
-              Message
-            </label>
-            <textarea
-            placeholder="Enter your message" required
-              id="message"
-              name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 
-              focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 
-              resize-none leading-6 transition-colors duration-200 ease-in-out"
-              />
-          </div>
-          <button
-            type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Submit
-          </button>
-        </form>
-</section>
-  );
+        <div class="form-group">
+          <label for="Name">user_name</label>
+          <input type="name" class="form-input-control" id="user_name" name="user_name" placeholder="Enter name" required></input>
+        </div>
+        <div class="form-group">
+         <label for="message">Message</label>
+        <textarea class="form-control" id="user_message" placeholder="Message" required></textarea>
+        </div>
+        <button type='submit' color='green'>Submit</button>
+      </form>
+    </div>
+  )
 }
+export default Contact;
+
+
+
+
+

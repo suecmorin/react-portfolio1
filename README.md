@@ -4,7 +4,7 @@
 This is an app, created using REACT, which showcases previous projects completed during the FullStack Boot Camp.
 
 ## INSTALLATION 
-Project is deployed to GitHub at http://suecmorin.github.io/react-portfolio. Screenshot of deployment is shown below.
+Project is deployed to GitHub at http://suecmorin.github.io/react-portfolio1. Screenshot of deployment is shown below.
 
 ## RESOURCES/CREDIT
 https://freecodecamp.org/news/build-portfolio-website-react/

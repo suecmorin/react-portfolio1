@@ -1,5 +1,5 @@
 import React from 'react';
-import 'http://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Project() {
     return (
