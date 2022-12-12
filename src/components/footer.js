@@ -1,15 +1,15 @@
 import React from 'react';
-
-
+import {  FaGithubSquare } from 'react-icons/fa';
+import {  FaLinkedinIn } from 'react-icons/fa';
+import {  FaEnvelope } from 'react-icons/fa';
 
   function Footer() {
      return (
-        <div className="footer">
-         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/6.2.1/css/font-awesome.min.css" rel="stylesheet"/>
-         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-         <a  href="http://twitter.com" className="twitter"><i className="fa-brands fa-twitter"></i></a>
-         <a href="http://github.com" className="github"><i  className="fa-brands fa-github"></i></a>
-         <a href="http://linkedin.com"className="linkedin"><i className="fa-brands fa-linkedin"></i></a>
+        <div className="footer" >
+        
+         <a  className='icon' href='mailto:suecmorin@gmail.com' ><FaEnvelope /></a>
+         <a className='icon' href='https://github.com/suecmorin' ><FaGithubSquare/></a>
+         <a className='icon' href='http://linkedin.com/susan-m-b0a66b23'><FaLinkedinIn /></a>
         </div>
      )
   }

@@ -1,7 +1,6 @@
 body {
     max-width: 90%;
     text-align: center;
-    background-color: gray;
     margin-top: 0;
 }
 
@@ -46,7 +45,9 @@ position: absolute;
 width: 100%;
 left: 0;
 bottom: 0;
-background: #333333;
+line-height: 100px;
 text-align: center;
 }
-
+.icon {
+    margin-right: 20px;
+}
