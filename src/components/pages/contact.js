@@ -2,8 +2,8 @@
 import React, {useRef} from "react";
 import emailjs from "emailjs-com";
 import 'bootstrap/dist/css/bootstrap.min.css';
-const SERVICE_ID = "default_service"
-const TEMPLATE_ID = "contact_template";
+const SERVICE_ID = "service_ruv95lk";
+const TEMPLATE_ID = "contact_form";
 const USER_ID = "yIYlKQuRfd4iacIRA";
 
 
@@ -19,7 +19,7 @@ const Contact = () => {
       (error) => {
         console.log('Oops, something went wrong'); 
       });
-      e.target.reset()
+    e.target.reset();
   };
 
 
@@ -44,7 +44,6 @@ return (
   )
 }
 export default Contact;
-
 
 
 

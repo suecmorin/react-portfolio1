@@ -18,8 +18,10 @@ export default function Resume() {
       <li>Inquirer</li>  
       <li>MySQL</li>  
       <li>MongoDB</li>
-      <li>Apollo</li> 
       </ul>
+      <a href="../images/resume.md" download="Resume">
+         <button type="button">Download Resume</button>
+         </a>
     </div>
   );
 }
