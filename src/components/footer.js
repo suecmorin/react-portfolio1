@@ -9,7 +9,7 @@ import {  FaEnvelope } from 'react-icons/fa';
         
          <a  className='icon' href='mailto:suecmorin@gmail.com' ><FaEnvelope /></a>
          <a className='icon' href='https://github.com/suecmorin' ><FaGithubSquare/></a>
-         <a className='icon' href='http://linkedin.com/susan-m-b0a66b23'><FaLinkedinIn /></a>
+         <a className='icon' href='http://www.linkedin.com/susan-m-b0a66b23'><FaLinkedinIn /></a>
         </div>
      )
   }
