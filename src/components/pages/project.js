@@ -44,7 +44,7 @@ function Project() {
                 <img className= 'card-img-top' src={noteapp} 
                     alt="Note App"/>
                      <h5 className='card-title'>Express and Heroku</h5>
-                <a href='https://github.com/suecmorin/notes'><button>GitHub Repo</button></a>
+                <a href='https://notes-sue.herokuapp.com'><button>GitHub Repo</button></a>
                 </div>
             </div> 
         </div>
